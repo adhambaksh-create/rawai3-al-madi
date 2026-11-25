@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المتجر — روائع الماضي</title>
+  <meta name="description" content="تصفح عملات ورقية ومعدنية وطوابع بريدية نادرة للبيع">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="shop">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="section-sm" style="padding-bottom:24px">
+      <div class="container">
+        <span class="eyebrow">مقتنياتنا</span>
+        <h1 style="font-size:clamp(2rem,4vw,3rem)">متجر روائع الماضي</h1>
+        <p style="color:var(--muted);max-width:620px;margin-top:10px">تصفّح مجموعة متنوعة من العملات والطوابع، واستخدم الفلاتر للوصول إلى ما تبحث عنه بسهولة.</p>
+      </div>
+    </section>
+
+    <section class="container" style="padding-bottom:90px">
+      <div class="shop-layout">
+        <!-- الفلاتر -->
+        <aside class="filter-panel" id="filter-panel" aria-label="فلاتر البحث">
+          <h3>تصفية النتائج</h3>
+          <div class="filter-group">
+            <span class="filter-label">التصنيف</span>
+            <div class="filter-options">
+              <label><input type="radio" name="category" value="all" checked> الكل</label>
+              <label><input type="radio" name="category" value="paper"> عملات ورقية</label>
+              <label><input type="radio" name="category" value="metal"> عملات معدنية</label>
+              <label><input type="radio" name="category" value="stamp"> طوابع بريدية</label>
+            </div>
+          </div>
+          <div class="filter-group">
+            <label for="filter-country">البلد</label>
+            <select id="filter-country" class="form-control">
+              <option value="all">كل البلدان</option>
+              <option value="مصر">مصر</option>
+              <option value="سوريا">سوريا</option>
+              <option value="الأردن">الأردن</option>
+              <option value="السعودية">السعودية</option>
+              <option value="العراق">العراق</option>
+              <option value="لبنان">لبنان</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <button class="btn btn-ghost btn-block btn-sm" id="clear-filters">إزالة كل الفلاتر</button>
+          </div>
+        </aside>
+
+        <!-- النتائج -->
+        <div>
+          <div class="shop-toolbar">
+            <div class="search-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="shop-search" class="form-control" type="search" placeholder="ابحث عن قطعة أو بلد..." aria-label="بحث في المتجر">
+            </div>
+            <button class="btn btn-outline btn-sm mobile-filter-toggle" id="mobile-filter-toggle">الفلاتر</button>
+            <span class="result-count" id="result-count">...</span>
+            <select id="shop-sort" class="form-control" aria-label="ترتيب النتائج">
+              <option value="newest">الأحدث أولاً</option>
+              <option value="price-asc">السعر: الأقل أولاً</option>
+              <option value="price-desc">السعر: الأعلى أولاً</option>
+              <option value="rating">الأعلى تقييماً</option>
+            </select>
+          </div>
+          <div class="products-grid" id="shop-products"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

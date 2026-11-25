@@ -1,0 +1,21 @@
+{
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": false,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "workbench.editor.enablePreview": false,
+  "files.exclude": {
+    "**/.git": true
+  },
+  "liveServer.settings.port": 5500,
+  "liveServer.settings.root": "/",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "html.format.wrapAttributes": "auto",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "[html][css][javascript][json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

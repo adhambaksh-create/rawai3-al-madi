@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بيع مقتنياتك — روائع الماضي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="sell">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="section-sm" style="padding-bottom:24px">
+      <div class="container">
+        <span class="eyebrow">شاركنا الشغف</span>
+        <h1 style="font-size:clamp(2rem,4vw,3rem)">اعرض قطعتك للبيع</h1>
+        <p style="color:var(--muted);max-width:640px;margin-top:10px">أضف تفاصيل قطعتك بدقة ليسهل على الهواة العثور عليها. ستظهر في المتجر فور نشر الإعلان.</p>
+      </div>
+    </section>
+
+    <section class="container section-sm" style="padding-top:20px;padding-bottom:90px">
+      <div class="contact-layout">
+        <aside>
+          <div class="contact-info-card">
+            <h3>نصائح قبل النشر</h3>
+            <div class="contact-line"><div class="cl-icon">✓</div><div><strong>كن دقيقاً في الوصف</strong><span>اذكر الحالة والسنة والعيوب إن وُجدت.</span></div></div>
+            <div class="contact-line"><div class="cl-icon">✓</div><div><strong>حدّد سعراً معقولاً</strong><span>قارن بأسعار القطع المشابهة في المتجر.</span></div></div>
+            <div class="contact-line"><div class="cl-icon">✓</div><div><strong>احرص على الصدق</strong><span>الثقة أساس مجتمعنا، وصفك يجب أن يعكس الحقيقة.</span></div></div>
+            <div class="contact-line"><div class="cl-icon">✓</div><div><strong>سجّل الدخول أولاً</strong><span>تحتاج حساباً لنشر إعلانك ومتابعته.</span></div></div>
+          </div>
+          <div class="map-placeholder">
+            <div><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 12a8 8 0 0 1-11.5 7.2L4 20l.8-4.5A8 8 0 1 1 20 12Z"/></svg><p>قطتك تستحق أن تُروى حكايتها</p></div>
+          </div>
+        </aside>
+
+        <div class="contact-form-card">
+          <div class="form-success" id="sell-success" hidden></div>
+          <h3 style="margin-bottom:22px">بيانات القطعة</h3>
+          <form id="sell-form">
+            <div class="form-group"><label for="sell-title">اسم القطعة *</label><input class="form-control" id="sell-title" name="title" required placeholder="مثال: ورقة نقدية ٥ جنيهات مصرية ١٩٥٨"></div>
+            <div class="form-row">
+              <div class="form-group"><label for="sell-category">التصنيف *</label><select class="form-control" id="sell-category" name="category" required><option value="paper">عملات ورقية</option><option value="metal">عملات معدنية</option><option value="stamp">طوابع بريدية</option></select></div>
+              <div class="form-group"><label for="sell-country">البلد *</label><input class="form-control" id="sell-country" name="country" required placeholder="مثال: مصر" value="مصر"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label for="sell-year">سنة الإصدار</label><input class="form-control" id="sell-year" name="year" placeholder="مثال: ١٩٥٨"></div>
+              <div class="form-group"><label for="sell-condition">الحالة *</label><select class="form-control" id="sell-condition" name="condition" required><option>ممتاز</option><option>جيد جداً</option><option>جيد</option><option>مستهلك</option></select></div>
+            </div>
+            <div class="form-group"><label for="sell-price">السعر (ر.س) *</label><input class="form-control" id="sell-price" name="price" type="number" min="1" required placeholder="مثال: 350"></div>
+            <div class="form-group"><label for="sell-desc">وصف القطعة</label><textarea class="form-control" id="sell-desc" name="description" placeholder="اكتب وصفاً مفصلاً يساعد المشتري على اتخاذ القرار..."></textarea></div>
+            <button class="btn btn-primary btn-block" type="submit">نشر الإعلان</button>
+            <p class="form-hint" style="text-align:center;margin-top:10px">لنشر إعلانك، يجب أن تكون <a href="account.html" style="color:var(--purple);text-decoration:underline;font-weight:700">مسجّل الدخول</a>.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
